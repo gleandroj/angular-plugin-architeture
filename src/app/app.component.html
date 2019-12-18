@@ -1,0 +1,9 @@
+<h1>Hello world!</h1>
+
+<ul class="menu">
+    <li *ngFor="let menu of menus">
+        <a [routerLink]="menu.path">{{ menu.title }} - {{ menu.path }}</a>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
