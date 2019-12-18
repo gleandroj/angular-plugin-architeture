@@ -163,45 +163,6 @@
           }
         }
       }
-    },
-    "lazylib2": {
-      "projectType": "library",
-      "root": "projects/lazylib2",
-      "sourceRoot": "projects/lazylib2/src",
-      "prefix": "lazylib2",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "configurations": {
-            "aot": true,
-            "buildOptimizer": true
-          },
-          "options": {
-            "tsConfig": "projects/lazylib2/tsconfig.lib.json",
-            "project": "projects/lazylib2/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/lazylib2/src/test.ts",
-            "tsConfig": "projects/lazylib2/tsconfig.spec.json",
-            "karmaConfig": "projects/lazylib2/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/lazylib2/tsconfig.lib.json",
-              "projects/lazylib2/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
     }
   },
   "defaultProject": "lib-demo"

@@ -49,18 +49,6 @@ export class ModuleService {
                     title: 'Lazy Lib'
                 }
             ]
-        },
-        {
-            url: 'assets/lazylib2/bundles/lazylib2.umd.js',
-            name: 'lazylib2',
-            module: 'Lazylib2Module',
-            prefix: 'lazy-lib2',
-            menus: [
-                {
-                    path: '/',
-                    title: 'Lazy Lib 2'
-                }
-            ]
         }
     ];
 

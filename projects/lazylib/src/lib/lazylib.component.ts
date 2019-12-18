@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Lazylib2Service } from 'lazylib2';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'lazylib-lazylib',
@@ -10,14 +9,6 @@ import { Lazylib2Service } from 'lazylib2';
   `,
   styles: []
 })
-export class LazylibComponent implements OnInit {
-
-  constructor(
-    private service: Lazylib2Service
-  ) { }
-
-  ngOnInit() {
-    this.service.hello();
-  }
+export class LazylibComponent {
 
 }

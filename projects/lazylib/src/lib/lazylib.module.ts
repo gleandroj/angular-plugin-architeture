@@ -15,9 +15,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   exports: [LazylibComponent],
-  providers: [
-
-  ]
+  providers: []
 })
 export class LazylibModule {
 
