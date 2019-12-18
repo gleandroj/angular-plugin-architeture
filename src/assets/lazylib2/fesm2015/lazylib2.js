@@ -1,45 +1,77 @@
-import { ɵɵdefineInjectable, ɵsetClassMetadata, Injectable, ɵɵdefineComponent, ɵɵelementStart, ɵɵtext, ɵɵelementEnd, Component, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
-import { hello } from 'hello-world-js';
+import { Injectable, ɵɵdefineInjectable, Component, NgModule } from '@angular/core';
+import { LazylibService } from 'lazylib';
 import { RouterModule } from '@angular/router';
 
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/lazylib2.service.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 class Lazylib2Service {
     constructor() { }
+    /**
+     * @return {?}
+     */
     hello() {
         alert("Hello from lazy lib 2");
     }
 }
-/** @nocollapse */ Lazylib2Service.ngInjectableDef = ɵɵdefineInjectable({ token: Lazylib2Service, factory: function Lazylib2Service_Factory(t) { return new (t || Lazylib2Service)(); }, providedIn: 'root' });
-/*@__PURE__*/ ɵsetClassMetadata(Lazylib2Service, [{
-        type: Injectable,
-        args: [{
+Lazylib2Service.decorators = [
+    { type: Injectable, args: [{
                 providedIn: 'root'
-            }]
-    }], function () { return []; }, null);
+            },] }
+];
+/** @nocollapse */
+Lazylib2Service.ctorParameters = () => [];
+/** @nocollapse */ Lazylib2Service.ngInjectableDef = ɵɵdefineInjectable({ factory: function Lazylib2Service_Factory() { return new Lazylib2Service(); }, token: Lazylib2Service, providedIn: "root" });
 
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/lazylib2.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 class Lazylib2Component {
-    constructor() { }
+    /**
+     * @param {?} service
+     */
+    constructor(service) {
+        this.service = service;
+    }
+    /**
+     * @return {?}
+     */
     ngOnInit() {
-        alert(hello());
+        this.service.hello();
     }
 }
-/** @nocollapse */ Lazylib2Component.ngComponentDef = ɵɵdefineComponent({ type: Lazylib2Component, selectors: [["lazylib2-lazylib2"]], factory: function Lazylib2Component_Factory(t) { return new (t || Lazylib2Component)(); }, consts: 2, vars: 0, template: function Lazylib2Component_Template(rf, ctx) { if (rf & 1) {
-        ɵɵelementStart(0, "p");
-        ɵɵtext(1, " lazylib2 works! ");
-        ɵɵelementEnd();
-    } }, encapsulation: 2 });
-/*@__PURE__*/ ɵsetClassMetadata(Lazylib2Component, [{
-        type: Component,
-        args: [{
+Lazylib2Component.decorators = [
+    { type: Component, args: [{
                 selector: 'lazylib2-lazylib2',
                 template: `
     <p>
     lazylib2 works!
     </p>
-  `,
-                styles: []
-            }]
-    }], function () { return []; }, null);
+  `
+            }] }
+];
+/** @nocollapse */
+Lazylib2Component.ctorParameters = () => [
+    { type: LazylibService }
+];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    Lazylib2Component.prototype.service;
+}
 
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/lazylib2.module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/** @type {?} */
 const routes = [
     {
         component: Lazylib2Component,
@@ -55,29 +87,33 @@ Lazylib2Module.menus = [
         title: 'Lazy Lib 2'
     }
 ];
-/** @nocollapse */ Lazylib2Module.ngModuleDef = ɵɵdefineNgModule({ type: Lazylib2Module });
-/** @nocollapse */ Lazylib2Module.ngInjectorDef = ɵɵdefineInjector({ factory: function Lazylib2Module_Factory(t) { return new (t || Lazylib2Module)(); }, providers: [], imports: [[
-            RouterModule.forChild(routes)
-        ]] });
-/*@__PURE__*/ ɵɵsetNgModuleScope(Lazylib2Module, { declarations: [Lazylib2Component], imports: [RouterModule], exports: [Lazylib2Component] });
-/*@__PURE__*/ ɵsetClassMetadata(Lazylib2Module, [{
-        type: NgModule,
-        args: [{
+Lazylib2Module.decorators = [
+    { type: NgModule, args: [{
                 declarations: [Lazylib2Component],
                 imports: [
                     RouterModule.forChild(routes)
                 ],
                 exports: [Lazylib2Component],
                 providers: []
-            }]
-    }], null, null);
+            },] }
+];
+if (false) {
+    /** @type {?} */
+    Lazylib2Module.prefix;
+    /** @type {?} */
+    Lazylib2Module.menus;
+}
 
-/*
- * Public API Surface of lazylib2
+/**
+ * @fileoverview added by tsickle
+ * Generated from: public-api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 /**
- * Generated bundle index. Do not edit.
+ * @fileoverview added by tsickle
+ * Generated from: lazylib2.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
  */
 
 export { Lazylib2Component, Lazylib2Module, Lazylib2Service };

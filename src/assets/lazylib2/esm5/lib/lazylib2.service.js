@@ -1,19 +1,31 @@
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/lazylib2.service.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 import { Injectable } from '@angular/core';
 import * as i0 from "@angular/core";
 var Lazylib2Service = /** @class */ (function () {
     function Lazylib2Service() {
     }
-    Lazylib2Service.prototype.hello = function () {
+    /**
+     * @return {?}
+     */
+    Lazylib2Service.prototype.hello = /**
+     * @return {?}
+     */
+    function () {
         alert("Hello from lazy lib 2");
     };
-    /** @nocollapse */ Lazylib2Service.ngInjectableDef = i0.ɵɵdefineInjectable({ token: Lazylib2Service, factory: function Lazylib2Service_Factory(t) { return new (t || Lazylib2Service)(); }, providedIn: 'root' });
+    Lazylib2Service.decorators = [
+        { type: Injectable, args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    /** @nocollapse */
+    Lazylib2Service.ctorParameters = function () { return []; };
+    /** @nocollapse */ Lazylib2Service.ngInjectableDef = i0.ɵɵdefineInjectable({ factory: function Lazylib2Service_Factory() { return new Lazylib2Service(); }, token: Lazylib2Service, providedIn: "root" });
     return Lazylib2Service;
 }());
 export { Lazylib2Service };
-/*@__PURE__*/ i0.ɵsetClassMetadata(Lazylib2Service, [{
-        type: Injectable,
-        args: [{
-                providedIn: 'root'
-            }]
-    }], function () { return []; }, null);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGF6eWxpYjIuc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2xhenlsaWIyLyIsInNvdXJjZXMiOlsibGliL2xhenlsaWIyLnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxFQUFFLFVBQVUsRUFBRSxNQUFNLGVBQWUsQ0FBQzs7QUFFM0M7SUFLRTtJQUFnQixDQUFDO0lBRWpCLCtCQUFLLEdBQUw7UUFDRSxLQUFLLENBQUMsdUJBQXVCLENBQUMsQ0FBQztJQUNqQyxDQUFDO3FFQU5VLGVBQWUsa0VBQWYsZUFBZSxvQkFGZCxNQUFNOzBCQUhwQjtDQVlDLEFBVkQsSUFVQztTQVBZLGVBQWU7bUNBQWYsZUFBZTtjQUgzQixVQUFVO2VBQUM7Z0JBQ1YsVUFBVSxFQUFFLE1BQU07YUFDbkIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJbmplY3RhYmxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBJbmplY3RhYmxlKHtcbiAgcHJvdmlkZWRJbjogJ3Jvb3QnXG59KVxuZXhwb3J0IGNsYXNzIExhenlsaWIyU2VydmljZSB7XG5cbiAgY29uc3RydWN0b3IoKSB7IH1cblxuICBoZWxsbygpIHtcbiAgICBhbGVydChcIkhlbGxvIGZyb20gbGF6eSBsaWIgMlwiKTtcbiAgfVxufVxuIl19
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGF6eWxpYjIuc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2xhenlsaWIyLyIsInNvdXJjZXMiOlsibGliL2xhenlsaWIyLnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBQSxPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sZUFBZSxDQUFDOztBQUUzQztJQUtFO0lBQWdCLENBQUM7Ozs7SUFFakIsK0JBQUs7OztJQUFMO1FBQ0UsS0FBSyxDQUFDLHVCQUF1QixDQUFDLENBQUM7SUFDakMsQ0FBQzs7Z0JBVEYsVUFBVSxTQUFDO29CQUNWLFVBQVUsRUFBRSxNQUFNO2lCQUNuQjs7Ozs7MEJBSkQ7Q0FZQyxBQVZELElBVUM7U0FQWSxlQUFlIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgSW5qZWN0YWJsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5ASW5qZWN0YWJsZSh7XG4gIHByb3ZpZGVkSW46ICdyb290J1xufSlcbmV4cG9ydCBjbGFzcyBMYXp5bGliMlNlcnZpY2Uge1xuXG4gIGNvbnN0cnVjdG9yKCkgeyB9XG5cbiAgaGVsbG8oKSB7XG4gICAgYWxlcnQoXCJIZWxsbyBmcm9tIGxhenkgbGliIDJcIik7XG4gIH1cbn1cbiJdfQ==

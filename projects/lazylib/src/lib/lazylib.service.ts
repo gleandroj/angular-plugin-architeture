@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class LazylibService {
 
   constructor() { }
+
+  hello() {
+    alert("Hello from lazy lib 1");
+  }
 }

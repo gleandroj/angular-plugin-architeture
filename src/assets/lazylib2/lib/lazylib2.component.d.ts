@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
-import * as i0 from "@angular/core";
+import { LazylibService } from 'lazylib';
 export declare class Lazylib2Component implements OnInit {
-    constructor();
+    private service;
+    constructor(service: LazylibService);
     ngOnInit(): void;
-    static ngComponentDef: i0.ɵɵComponentDefWithMeta<Lazylib2Component, "lazylib2-lazylib2", never, {}, {}, never>;
 }

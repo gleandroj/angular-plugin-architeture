@@ -26,6 +26,7 @@
     "express": "^4.17.1",
     "hello-world-js": "0.0.2",
     "lazylib2": "file:./dist/lazylib2",
+    "lazylib": "file:./dist/lazylib",
     "little-loader": "^0.2.0",
     "rxjs": "~6.4.0",
     "systemjs": "^6.1.7",

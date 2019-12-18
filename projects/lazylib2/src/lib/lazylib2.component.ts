@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as hello from 'hello-world-js';
+import { LazylibService } from 'lazylib';
 
 @Component({
   selector: 'lazylib2-lazylib2',
@@ -12,10 +12,10 @@ import * as hello from 'hello-world-js';
 })
 export class Lazylib2Component implements OnInit {
 
-  constructor() { }
+  constructor(private service: LazylibService) { }
 
   ngOnInit() {
-    alert(hello.hello());
+    this.service.hello();
   }
 
 }

@@ -1,29 +1,43 @@
+/**
+ * @fileoverview added by tsickle
+ * Generated from: lib/lazylib.component.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
 import { Component } from '@angular/core';
-import * as i0 from "@angular/core";
-import * as i1 from "lazylib2";
+import { Lazylib2Service } from 'lazylib2';
 export class LazylibComponent {
+    /**
+     * @param {?} service
+     */
     constructor(service) {
         this.service = service;
     }
+    /**
+     * @return {?}
+     */
     ngOnInit() {
         this.service.hello();
     }
 }
-/** @nocollapse */ LazylibComponent.ngComponentDef = i0.ɵɵdefineComponent({ type: LazylibComponent, selectors: [["lazylib-lazylib"]], factory: function LazylibComponent_Factory(t) { return new (t || LazylibComponent)(i0.ɵɵdirectiveInject(i1.Lazylib2Service)); }, consts: 2, vars: 0, template: function LazylibComponent_Template(rf, ctx) { if (rf & 1) {
-        i0.ɵɵelementStart(0, "p");
-        i0.ɵɵtext(1, " lazylib works! ");
-        i0.ɵɵelementEnd();
-    } }, encapsulation: 2 });
-/*@__PURE__*/ i0.ɵsetClassMetadata(LazylibComponent, [{
-        type: Component,
-        args: [{
+LazylibComponent.decorators = [
+    { type: Component, args: [{
                 selector: 'lazylib-lazylib',
                 template: `
     <p>
       lazylib works!
     </p>
-  `,
-                styles: []
-            }]
-    }], function () { return [{ type: i1.Lazylib2Service }]; }, null);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGF6eWxpYi5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9sYXp5bGliLyIsInNvdXJjZXMiOlsibGliL2xhenlsaWIuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxTQUFTLEVBQVUsTUFBTSxlQUFlLENBQUM7OztBQVlsRCxNQUFNLE9BQU8sZ0JBQWdCO0lBRTNCLFlBQ1UsT0FBd0I7UUFBeEIsWUFBTyxHQUFQLE9BQU8sQ0FBaUI7SUFDOUIsQ0FBQztJQUVMLFFBQVE7UUFDTixJQUFJLENBQUMsT0FBTyxDQUFDLEtBQUssRUFBRSxDQUFDO0lBQ3ZCLENBQUM7OytEQVJVLGdCQUFnQixxR0FBaEIsZ0JBQWdCO1FBTnpCLHlCQUNFO1FBQUEsZ0NBQ0Y7UUFBQSxpQkFBSTs7bUNBSUssZ0JBQWdCO2NBVDVCLFNBQVM7ZUFBQztnQkFDVCxRQUFRLEVBQUUsaUJBQWlCO2dCQUMzQixRQUFRLEVBQUU7Ozs7R0FJVDtnQkFDRCxNQUFNLEVBQUUsRUFBRTthQUNYIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgQ29tcG9uZW50LCBPbkluaXQgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IExhenlsaWIyU2VydmljZSB9IGZyb20gJ2xhenlsaWIyJztcblxuQENvbXBvbmVudCh7XG4gIHNlbGVjdG9yOiAnbGF6eWxpYi1sYXp5bGliJyxcbiAgdGVtcGxhdGU6IGBcbiAgICA8cD5cbiAgICAgIGxhenlsaWIgd29ya3MhXG4gICAgPC9wPlxuICBgLFxuICBzdHlsZXM6IFtdXG59KVxuZXhwb3J0IGNsYXNzIExhenlsaWJDb21wb25lbnQgaW1wbGVtZW50cyBPbkluaXQge1xuXG4gIGNvbnN0cnVjdG9yKFxuICAgIHByaXZhdGUgc2VydmljZTogTGF6eWxpYjJTZXJ2aWNlXG4gICkgeyB9XG5cbiAgbmdPbkluaXQoKSB7XG4gICAgdGhpcy5zZXJ2aWNlLmhlbGxvKCk7XG4gIH1cblxufVxuIl19
+  `
+            }] }
+];
+/** @nocollapse */
+LazylibComponent.ctorParameters = () => [
+    { type: Lazylib2Service }
+];
+if (false) {
+    /**
+     * @type {?}
+     * @private
+     */
+    LazylibComponent.prototype.service;
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGF6eWxpYi5jb21wb25lbnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9sYXp5bGliLyIsInNvdXJjZXMiOlsibGliL2xhenlsaWIuY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsT0FBTyxFQUFFLFNBQVMsRUFBVSxNQUFNLGVBQWUsQ0FBQztBQUNsRCxPQUFPLEVBQUUsZUFBZSxFQUFFLE1BQU0sVUFBVSxDQUFDO0FBVzNDLE1BQU0sT0FBTyxnQkFBZ0I7Ozs7SUFFM0IsWUFDVSxPQUF3QjtRQUF4QixZQUFPLEdBQVAsT0FBTyxDQUFpQjtJQUM5QixDQUFDOzs7O0lBRUwsUUFBUTtRQUNOLElBQUksQ0FBQyxPQUFPLENBQUMsS0FBSyxFQUFFLENBQUM7SUFDdkIsQ0FBQzs7O1lBakJGLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsaUJBQWlCO2dCQUMzQixRQUFRLEVBQUU7Ozs7R0FJVDthQUVGOzs7O1lBVlEsZUFBZTs7Ozs7OztJQWNwQixtQ0FBZ0MiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDb21wb25lbnQsIE9uSW5pdCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgTGF6eWxpYjJTZXJ2aWNlIH0gZnJvbSAnbGF6eWxpYjInO1xuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdsYXp5bGliLWxhenlsaWInLFxuICB0ZW1wbGF0ZTogYFxuICAgIDxwPlxuICAgICAgbGF6eWxpYiB3b3JrcyFcbiAgICA8L3A+XG4gIGAsXG4gIHN0eWxlczogW11cbn0pXG5leHBvcnQgY2xhc3MgTGF6eWxpYkNvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCB7XG5cbiAgY29uc3RydWN0b3IoXG4gICAgcHJpdmF0ZSBzZXJ2aWNlOiBMYXp5bGliMlNlcnZpY2VcbiAgKSB7IH1cblxuICBuZ09uSW5pdCgpIHtcbiAgICB0aGlzLnNlcnZpY2UuaGVsbG8oKTtcbiAgfVxuXG59XG4iXX0=

@@ -1,14 +1,13 @@
-import { Injectable, Injector, Compiler, NgModuleFactory } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 import * as AngularCore from '@angular/core';
 import * as AngularCommon from '@angular/common';
 import * as AngularRouter from '@angular/router';
 import * as BrowserAnimations from '@angular/platform-browser/animations';
 import * as hello from 'hello-world-js';
-import { Subject, interval } from 'rxjs';
-import { filter, map, catchError, take } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { filter, map, take } from 'rxjs/operators';
 
 declare var window: any;
 
@@ -27,6 +26,7 @@ interface Module {
     prefix: string;
     loaded?: boolean;
     loading?: boolean;
+    error?: any;
     menus: { path: string; title: string }[]
 };
 
@@ -66,10 +66,6 @@ export class ModuleService {
 
     private get router(): Router {
         return this.injector.get(Router);
-    }
-
-    private get http(): HttpClient {
-        return this.injector.get(HttpClient);
     }
 
     public constructor(
@@ -121,6 +117,11 @@ export class ModuleService {
                 const deepModuleInfo = this.modules.find(m => m.name === deep);
 
                 if (deepModuleInfo != null) {
+
+                    if (deepModuleInfo.loading) {
+                        throw new Error(`Dependência ciclica detectada: ${name} -> ${deep} -> ${name}`);
+                    }
+
                     this.loadModule(deepModuleInfo);
 
                     const m = await this.moduleLoaded$
@@ -132,23 +133,20 @@ export class ModuleService {
                     if (m.loaded) {
                         factoryArgs.push(externals[m.name]);
                     } else {
-                        delete externals[name];
                         throw new Error(`Falha ao carregar depêndencia: ${deep}`);
                     }
-
                 } else {
-                    delete externals[name];
                     throw new Error(`Dependencia de módulo não encontrada: ${deep}`);
                 }
             }
         }
 
-        externals[name] = {};
-        factory.apply(this, [externals[name], ...factoryArgs]);
-
-        if (externals[name] == undefined || Object.keys(externals[name]).length === 0) {
+        const exp = {};
+        factory.apply(this, [exp, ...factoryArgs]);
+        if (exp == undefined || Object.keys(exp).length === 0) {
             throw new Error(`Falha ao carregar módulo: ${name}, nenhum valor exportado.`);
         }
+        externals[name] = exp;
     }
 
     private async define() {
@@ -165,7 +163,7 @@ export class ModuleService {
         }, (error) => {
             moduleInfo.loaded = false;
             moduleInfo.loading = false;
-            console.log(`asyncDefine: Falha ao carregar o módulo: ${name}`);
+            moduleInfo.error = error;
             this.moduleLoaded$.next(moduleInfo);
         });
     }
@@ -177,16 +175,19 @@ export class ModuleService {
             loadChildren: () => {
                 if (m.loaded) {
                     return externals[m.name][m.module];
-                } else {
-                    this.loadModule(m);
+                } else if (m.error != null) {
+                    alert(`Falha ao carregar o módulo: ${m.name}, ${m.error}`);
+                    throw m.error;
                 }
+                this.loadModule(m);
                 return this.moduleLoaded$.pipe(
                     filter(moduleInfo => moduleInfo.name === m.name),
                     map(() => {
                         if (m.loaded) {
                             return externals[m.name][m.module];
                         } else {
-                            throw new Error(`loadChildren: Falha ao carregar o módulo: ${m.name}`);
+                            alert(`Falha ao carregar o módulo: ${m.name}, ${m.error}`);
+                            throw m.error || new Error(`loadChildren: Falha ao carregar o módulo: ${m.name}`);
                         }
                     })
                 );
